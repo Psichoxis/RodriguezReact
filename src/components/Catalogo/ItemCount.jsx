@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState} from 'react'
 
-export default function ItemCount({stock, valorInicial}) {
+export default function ItemCount({stock, valorInicial, onAdd}) {
     const [total,setTotal] = useState(valorInicial)
 
     useEffect( () => {
@@ -9,7 +9,7 @@ export default function ItemCount({stock, valorInicial}) {
             alert("Cantidad excedente del stock")
             setTotal(stock)
         } 
-    })
+    }, [total, stock])
 
     return (
 
@@ -20,9 +20,9 @@ export default function ItemCount({stock, valorInicial}) {
                 <button onClick={() => setTotal(total+1)}>+</button>
             </div>
             <div>
-                {<button onClick={() => {alert('Se agregaron ' + total + ' productos correctamente al carrito')} }>Agregar al carrito</button>}
+                <button onClick={()=> onAdd(total)}>Agregar al carrito</button>
             </div>
         </div>
-    )
+    )[total]
 }
 
