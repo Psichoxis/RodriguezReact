@@ -23,6 +23,8 @@ export default function ItemCount({stock, valorInicial, onAdd}) {
                 <button onClick={()=> onAdd(total)}>Agregar al carrito</button>
             </div>
         </div>
-    )[total]
+    )
 }
+
+
 

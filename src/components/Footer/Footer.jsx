@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import "./footer.css"
 
 export default function Footer() {

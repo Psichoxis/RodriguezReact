@@ -1,6 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom'
+import tiramisu from "../../img/tiramisu.jpeg"
+import chocooreo from "../../img/chocooreo.jpeg"
+import brownie from "../../img/brownie.jpeg"
+import oreo from "../../img/oreo.jpeg"
+import chocoflan from "../../img/chocoflan.jpeg"
+import chocotorta from "../../img/chocotorta.jpeg"
+import moka from "../../img/moka.jpeg"
+import lemonpie from "../../img/lemonpie.jpeg"
+import lemonbrownie from "../../img/lemonbrownie.jpeg"
+import budin from "../../img/budin.jpeg"
+import alfajormaicena from "../../img/alfajormaicena.jpeg"
+import alfajorchoco from "../../img/alfajorchoco.jpeg"
 
 const ItemDetailContainer = () => {
   
@@ -16,7 +28,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Tiramisú",
       "description": "Postre individual a base de Vainillas con café y crema",
-      "url": "../../img/tiramisu.jpeg"
+      "url": tiramisu
     },
     {
       "id": 2,
@@ -25,7 +37,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Choco oreo",
       "description": "Base de galletita oreo, crema chocolina, galletitas chocolina en el medio, crems oreo y una capa de galletita oreo arriba.",
-      "url": "../../img/chocooreo.jpeg"
+      "url": chocooreo
     },
     {
       "id": 3,
@@ -34,7 +46,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Brownie",
       "description": "Pedacitos de brownie con crema chocolina y rocklets.",
-      "url": "../../img/brownie.jpeg"
+      "url": brownie
     },
     {
       "id": 4,
@@ -43,7 +55,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Oreo",
       "description": "Galletitas oreo, dulce de leche, crema oreo.",
-      "url": "../../img/oreo.jpeg"
+      "url": oreo
     },
     {
       "id": 5,
@@ -52,7 +64,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Chocoflan",
       "description": "Flan de vainilla, gotitas de chocolate semi-amargo y crema chantilly.",
-      "url": "../../img/chocoflan.jpeg"
+      "url": chocoflan
     },
     {
       "id": 6,
@@ -61,7 +73,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Chocotorta",
       "description": "Galletitas chocolina, crema chocolina.",
-      "url": "../../img/chocotorta.jpeg"
+      "url": chocotorta
     },
     {
       "id": 7,
@@ -70,7 +82,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Crema Moka",
       "description": "Crema chantilly con crema cafe y vainillitas.",
-      "url": "../../img/moka.jpeg"
+      "url": moka
     },
     {
       "id": 8,
@@ -79,7 +91,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Lemon Pie",
       "description": "Base de tarta, crema de limon, merengue.",
-      "url": "../../img/lemonpie.jpeg"
+      "url": lemonpie
     },
     {
       "id": 9,
@@ -88,7 +100,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Lemon Brownie",
       "description": "Base de brownie, crema de limon, merengue.",
-      "url": "../../img/lemonbrownie.jpeg"
+      "url": lemonbrownie
     },
     {
       "id": 10,
@@ -97,7 +109,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Budín de Mandarina",
       "description": "Postre individual a base de Vainillas con café y crema.",
-      "url": "../../img/budin.jpeg"
+      "url": budin
     },
     {
       "id": 11,
@@ -106,7 +118,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Alfajor de Maicena",
       "description": "Tapitas con relleno de dulce de leche y coco rallado.",
-      "url": "../../img/alfajormaicena.jpeg"
+      "url": alfajormaicena
     },
     {
       "id": 12,
@@ -115,7 +127,7 @@ const ItemDetailContainer = () => {
       "stock": 5,
       "title": "Alfajor de Chocolate",
       "description": "Tapitas con relleno de dulce de leche y baño de chocolate.",
-      "url": "../../img/alfajorchoco.jpeg"
+      "url": alfajorchoco
     }]
     
       const miPromesa = new Promise((res, rej) => {

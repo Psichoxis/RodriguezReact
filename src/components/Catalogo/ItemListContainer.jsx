@@ -1,6 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import tiramisu from "../../img/tiramisu.jpeg"
+import chocooreo from "../../img/chocooreo.jpeg"
+import brownie from "../../img/brownie.jpeg"
+import oreo from "../../img/oreo.jpeg"
+import chocoflan from "../../img/chocoflan.jpeg"
+import chocotorta from "../../img/chocotorta.jpeg"
+import moka from "../../img/moka.jpeg"
+import lemonpie from "../../img/lemonpie.jpeg"
+import lemonbrownie from "../../img/lemonbrownie.jpeg"
+import budin from "../../img/budin.jpeg"
+import alfajormaicena from "../../img/alfajormaicena.jpeg"
+import alfajorchoco from "../../img/alfajorchoco.jpeg"
 
 const ItemListContainer = () => {
     const [items,setItems]=useState([])
@@ -15,7 +27,7 @@ const ItemListContainer = () => {
         "precio": 600,
         "stock": 5,
         "title": "Tiramisú",
-        "url": "../../img/tiramisu.jpeg"
+        "url": tiramisu
       },
       {
         "id": 2,
@@ -24,7 +36,7 @@ const ItemListContainer = () => {
         "precio": 650,
         "stock": 5,
         "title": "Choco oreo",
-        "url": "../../img/chocooreo.jpeg"
+        "url": chocooreo
       },
       {
         "id": 3,
@@ -33,7 +45,7 @@ const ItemListContainer = () => {
         "precio": 600,
         "stock": 5,
         "title": "Brownie",
-        "url": "../../img/brownie.jpeg"
+        "url": brownie
       },
       {
         "id": 4,
@@ -42,7 +54,7 @@ const ItemListContainer = () => {
         "precio": 650,
         "stock": 5,
         "title": "Oreo",
-        "url": "../../img/oreo.jpeg"
+        "url": oreo
       },
       {
         "id": 5,
@@ -51,7 +63,7 @@ const ItemListContainer = () => {
         "precio": 600,
         "stock": 5,
         "title": "Chocoflan",
-        "url": "../../img/chocoflan.jpeg"
+        "url": chocoflan
       },
       {
         "id": 6,
@@ -60,7 +72,7 @@ const ItemListContainer = () => {
         "precio": 600,
         "stock": 5,
         "title": "Chocotorta",
-        "url": "../../img/chocotorta.jpeg"
+        "url": chocotorta
       },
       {
         "id": 7,
@@ -69,7 +81,7 @@ const ItemListContainer = () => {
         "precio": 600,
         "stock": 5,
         "title": "Crema Moka",
-        "url": "../../img/moka.jpeg"
+        "url": moka
       },
       {
         "id": 8,
@@ -78,7 +90,7 @@ const ItemListContainer = () => {
         "precio": 600,
         "stock": 5,
         "title": "Lemon Pie",
-        "url": "../../img/lemonpie.jpeg"
+        "url": lemonpie
       },
       {
         "id": 9,
@@ -87,7 +99,7 @@ const ItemListContainer = () => {
         "precio": 600,
         "stock": 5,
         "title": "Lemon Brownie",
-        "url": "../../img/lemonbrownie.jpeg"
+        "url": lemonbrownie
       },
       {
         "id": 10,
@@ -96,7 +108,7 @@ const ItemListContainer = () => {
         "precio": 700,
         "stock": 5,
         "title": "Budín de Mandarina",
-        "url": "../../img/budin.jpeg"
+        "url": budin
       },
       {
         "id": 11,
@@ -105,7 +117,7 @@ const ItemListContainer = () => {
         "precio": 250,
         "stock": 5,
         "title": "Alfajor de Maicena",
-        "url": "../../img/alfajormaicena.jpeg"
+        "url": alfajormaicena
       },
       {
         "id": 12,
@@ -114,7 +126,7 @@ const ItemListContainer = () => {
         "precio": 250,
         "stock": 5,
         "title": "Alfajor de Chocolate",
-        "url": "../../img/alfajorchoco.jpeg"
+        "url": alfajorchoco
       }]
 
       const miPromesa = new Promise((res, rej) => {

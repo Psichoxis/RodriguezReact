@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark text-light">
     <div className="container-fluid">
-      <Link to={"/"} className="navbar-brand col-lg-6"><img src={logo} alt="" width="80" height="80" className="d-inline-block align-text-center"/>
+      <Link to={"/"} className="navbar-brand col-lg-4"><img src={logo} alt="" width="80" height="80" className="d-inline-block align-text-center m-4"/>
         Galactic Cakes</Link>
-      <button className="navbar-toggler col-lg-6" type="button" data-bs-toggle="collapse"
+      <button className="navbar-toggler col-lg-4" type="button" data-bs-toggle="collapse"
         data-bs-target="#collapsibleNavbar">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +26,7 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="col-lg-4 justify-center">
           <CartWidget />
       </div>
     </div>
