@@ -1,9 +1,9 @@
 import React from 'react'
-import CartWidget from './CartWidget'
+import CartWidget from '../Carrito/CartWidget'
 import logo from '../../img/logo.png';
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = ({cartCount}) => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark text-light">
     <div className="container-fluid">
@@ -27,7 +27,7 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="col-lg-4 justify-center">
-          <CartWidget />
+          <CartWidget cartCount={cartCount} />
       </div>
     </div>
     </nav>

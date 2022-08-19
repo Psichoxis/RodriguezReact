@@ -14,19 +14,30 @@ const CartContextProvider = ({children}) => {
         if (index > -1) {
             const oldItem = cartList[index].cantidad
             cartList.splice(index, 1)
-            setCartList([...cartList, {...item, cantidad: item.total + oldItem}])
+            setCartList([...cartList, {...item, cantidad: item.cantidad + oldItem}])
         } else {
             setCartList([...cartList, item])
         }
+    }
+
+    const eliminarItem = (id) => {
+        const carritoFiltrado = cartList.filter((item) => item.id !== id)
+        setCartList(carritoFiltrado)
     }
 
     function vaciarCarrito(){
         setCartList([])
     }
 
+    const totalCompra = () => {
+        return ( 
+            cartList.reduce((prev, item) => (prev + item.cantidad * item.precio), 0)
+        )
+    }
+
 
     return (
-        <CartContext.Provider value={{cartList,agregarAlCarrito,vaciarCarrito}}>
+        <CartContext.Provider value={{cartList,agregarAlCarrito,vaciarCarrito,eliminarItem,totalCompra}}>
             {children}
         </CartContext.Provider>
     )
