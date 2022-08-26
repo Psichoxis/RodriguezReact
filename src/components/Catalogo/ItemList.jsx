@@ -6,7 +6,7 @@ const ItemList = memo(({itemx}) => {
     <div>
     {
         itemx.map((producto)=>
-             <Item key={producto.id} idItem={producto.idItem} precio={producto.precio} stock={producto.stock} title={producto.title} url={producto.url} />
+             <Item key={producto.id} idItem={producto.id} precio={producto.precio} stock={producto.stock} title={producto.title} url={producto.url} />
         )
     }
     </div>  
