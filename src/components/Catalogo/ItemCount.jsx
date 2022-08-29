@@ -8,7 +8,12 @@ export default function ItemCount({stock, valorInicial, onAdd}) {
         if(total>stock){
             alert("Cantidad excedente del stock")
             setTotal(stock)
-        } 
+        } else {
+            if(total<0){
+                alert("No se puede colocar esa cantidad.")
+                setTotal(stock)
+            }
+        }
     }, [total, stock])
 
     return (
