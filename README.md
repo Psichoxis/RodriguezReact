@@ -11,6 +11,7 @@ Utilicé Bootswatch para los estilos ya que es una herramienta eficaz y practica
 
 Añadi la libreria de Toastify de react para sumarle alertas personalizadas y darle mas vida al proyecto.
 
+## [Link a la web Hosteada en Firebase](https://galacticcakess.firebaseapp.com/)
 
 ## [Click Aqui para Video demostrativo:](https://firebasestorage.googleapis.com/v0/b/galacticcakess.appspot.com/o/Example.mp4?alt=media&token=1c592cba-088e-48b0-a7b3-9e41630dc246)
 
