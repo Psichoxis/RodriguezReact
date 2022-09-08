@@ -1,4 +1,5 @@
 import './App.css';
+import "bootswatch/dist/vapor/bootstrap.min.css";
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Catalogo/ItemListContainer';
 import ItemDetailContainer from './components/Catalogo/ItemDetailContainer';

@@ -15,7 +15,7 @@ function Cart() {
                 <div className="container mt-5">
                     <div className="row text-center justify-content-center">
                         <h3><strong>No hay productos en tu carrito</strong></h3>
-                        <Link to="/">Ir a comprar</Link>
+                        <Link to="/"><button className="btn btn-primary bg-gradient me-3 mt-3">Ir a comprar</button></Link>
                     </div>
                 </div>
             :

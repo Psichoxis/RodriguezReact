@@ -24,7 +24,7 @@ const ItemListContainer = () => {
       
   return (
     <>
-    <div>
+    <div className='text-center'>
     <ItemList itemx={items}/>
     </div>
     </>

@@ -3,7 +3,41 @@
   padding: 0;
   font-family: 'Oswald', sans-serif;
 }
+
+.containerFooter {
+  margin-top: 50px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 50px 80px 20px; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."; 
+}
+
+.aa {
+  list-style: none !important;
+  text-decoration: none !important;
+  color: white;
+  font-size: 25px;
+}
+
+.aa:hover {
+  color: #32fbe2;
+}
+
+.footlist {
+  display: inline;
+  text-align: center;
+  line-height: 100px;
+  margin: 25px;
+}
+
 .img-detail{
   width: 250px;
   height: 250px;
+}
+
+.colour{
+  color: #32fbe2;
 }

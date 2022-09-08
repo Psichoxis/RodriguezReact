@@ -1,12 +1,27 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../CartContext/CartContext'
+import {toast, ToastContainer} from 'react-toastify';
 
 const CartList = () => {
 
     const { cartList, totalCompra, eliminarItem, vaciarCarrito } = useContext(CartContext)
 
+    const notify = () => {
+        toast.success('Producto eliminado correctamente!', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+            });
+    }
+
     return (
+        <>
         <div className="container">
             <div className="row mt-4 justify-content-center text-center">
                 <div className="row">
@@ -22,7 +37,7 @@ const CartList = () => {
                         <h5>Cantidad:</h5>
                     </div>
                     <div className="col-2">
-                        <h5>Total:</h5>
+                        <h5>Subtotal:</h5>
                     </div>
                     <div className="col-1">
                     </div>
@@ -31,7 +46,7 @@ const CartList = () => {
             <hr></hr>
             <div className="row justify-content-center text-center">
                 {cartList.map(prod => 
-                <div className="row align-items-center" key={prod.id}>
+                <div className="row align-items-center mb-3" key={prod.id}>
                     <div className="col-3">
                         <img src={prod.url} alt="" style={{width:150}}></img>
                     </div>
@@ -48,7 +63,10 @@ const CartList = () => {
                         <h5>${prod.cantidad * prod.precio}</h5>
                     </div>
                     <div className="col-1">
-                        <button onClick={() => eliminarItem(prod.id)}>Eliminar</button>
+                        <button className="btn btn-primary bg-gradient me-3 mt-3" onClick={() => {
+                            eliminarItem(prod.id)
+                            notify()
+                        }}>Eliminar</button>
                     </div>
                     <hr></hr>
                 </div>
@@ -56,11 +74,13 @@ const CartList = () => {
                 <h3><b>Precio Total:</b></h3>
                 <h4><b>${totalCompra()}</b></h4>
                 <div>
-                    <button onClick={vaciarCarrito}>Vaciar Carrito</button>
-                    <Link to="/checkout"><button>Procesar Compra</button></Link>
+                    <button className="btn btn-primary bg-gradient me-3 mt-3" onClick={vaciarCarrito}>Vaciar Carrito</button>
+                    <Link to="/checkout"><button className="btn btn-primary bg-gradient me-3 mt-3">Procesar Compra</button></Link>
                 </div>
             </div>
         </div>
+        <ToastContainer/>
+        </>
     )
 }
 
